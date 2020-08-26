@@ -1,0 +1,16 @@
+<h1>Create a New Todo below:</h1>
+
+<form [formGroup] = "todoForm"> <!-- (ngSubmit)= "onSubmit()" -->
+    <label for="">Todo Name:</label>
+    <input type="text" formControlName = "todoName">
+
+    <label for="todoDescription">Todo Description:</label>
+    <input [(ngModel)] = "todoDescriptionDisplay" type="text" formControlName="todoDescription">
+    <p>{{ todoDescriptionDisplay}} </p>
+
+    <label for="todoCatagory">Todo Catagory:</label>
+    <input type="text" formControlName = "todoCatagory">
+
+    <button type="button" (click)='onSubmit()'>Submit Button</button>
+    <!-- <button type="submit">Submit Button</button> -->
+</form>

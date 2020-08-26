@@ -1,0 +1,32 @@
+<p>reference-code works!</p>
+<h1>{{ hello }}</h1>
+
+<button (click) = 'displayLanguage()'>Display Language Button</button>
+
+<button (click) = 'displayEvent($event)'>Display Mounse Event</button>
+
+
+<h1>Angulare Directives</h1> 
+<h2>*ngFor Directive</h2>
+<p>
+  ngFor loops over iterable objects such as arrays and object literals to display the data that is inside of these objects.
+</p>
+<ul *ngFor="let food of foods">
+  <li>{{food.item1}}, {{i}}</li>
+</ul>
+
+
+<h2>*ngIf Directive</h2>
+<p>ngIf will conditionally show content on the page assuming that he conditiontal statement is true.</p>
+
+<!-- "===" checks both value and type -->
+<h4 *ngIf  = "name === 'Joel'">Display User: {{ name }}</h4>  <!--Doesn't show because of .ts -->
+<h4 *ngIf  = "name === 'Robert'">Display User: {{ name }}</h4>
+
+<div>
+  <h1>Two-way data binding</h1>
+  <p>Tow-way data binding allows info to be changes and displayed at the same time.</p>
+  <button (click)="increment()">Increase Size</button>
+  <button (click)= "decrement()">Decrease Size</button>
+  <label [style.font-size.px]="size">FontSize : {{size}} px</label>
+</div>
